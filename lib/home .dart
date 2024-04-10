@@ -8,10 +8,15 @@ class Home extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 233, 230, 230),
       appBar: AppBar(
-        title: const Text("Wether Widget"),
+        backgroundColor: const Color.fromARGB(255, 33, 130, 209),
+        title: const Text(
+          "Wether Widget",
+          style: TextStyle(color: Colors.white),
+        ),
+        centerTitle: true,
       ),
       body: Padding(
-        padding: const EdgeInsets.fromLTRB(10, 30, 5, 10),
+        padding: const EdgeInsets.all(15),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
@@ -28,8 +33,8 @@ class Home extends StatelessWidget {
                         BoxShadow(
                           color: Colors.grey
                               .withOpacity(0.5), // Color of the shadow
-                          spreadRadius: 5, // Spread radius
-                          blurRadius: 7, // Blur radius
+                          spreadRadius: 4, // Spread radius
+                          blurRadius: 4, // Blur radius
                           offset:
                               const Offset(0, 3), // Offset from the container
                         ),
@@ -54,7 +59,7 @@ class Home extends StatelessWidget {
                             child: Text(
                               "CLOUDY DAY",
                               style: TextStyle(
-                                  fontSize: 16, fontWeight: FontWeight.w600),
+                                  fontSize: 14, fontWeight: FontWeight.w600),
                             ),
                           ),
                         ],
@@ -63,7 +68,7 @@ class Home extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(
-                  height: 20,
+                  height: 15,
                 ),
                 Container(
                   height: 90,
@@ -75,8 +80,8 @@ class Home extends StatelessWidget {
                       BoxShadow(
                         color:
                             Colors.grey.withOpacity(0.5), // Color of the shadow
-                        spreadRadius: 5, // Spread radius
-                        blurRadius: 7, // Blur radius
+                        spreadRadius: 4, // Spread radius
+                        blurRadius: 4, // Blur radius
                         offset: const Offset(0, 3), // Offset from the container
                       ),
                     ],
@@ -125,10 +130,13 @@ class Home extends StatelessWidget {
                 ),
               ],
             ),
+            const SizedBox(
+              width: 12,
+            ),
             Align(
               alignment: Alignment.topRight,
               child: Container(
-                height: 200,
+                height: 195,
                 width: 150,
                 decoration: BoxDecoration(
                   color: const Color.fromARGB(255, 255, 255, 255),
@@ -137,31 +145,42 @@ class Home extends StatelessWidget {
                     BoxShadow(
                       color:
                           Colors.grey.withOpacity(0.5), // Color of the shadow
-                      spreadRadius: 5, // Spread radius
-                      blurRadius: 7, // Blur radius
+                      spreadRadius: 4, // Spread radius
+                      blurRadius: 4, // Blur radius
                       offset: const Offset(0, 3), // Offset from the container
                     ),
                   ],
                 ),
                 child: const Padding(
-                  padding: EdgeInsets.all(1.0),
+                  padding: EdgeInsets.all(5.0),
                   child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       Text(
                         "22",
                         style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 30),
+                            fontWeight: FontWeight.w500, fontSize: 40),
                       ),
-                      Text(
-                        "..",
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 20),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(
+                            Icons.circle,
+                            size: 8,
+                          ),
+                          SizedBox(
+                            width: 2,
+                          ),
+                          Icon(
+                            Icons.circle,
+                            size: 8,
+                          ),
+                        ],
                       ),
-                      SizedBox(height: 4),
                       Text(
                         "56",
                         style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 30),
+                            fontWeight: FontWeight.w500, fontSize: 40),
                       ),
                       SizedBox(
                         height: 6,
@@ -169,12 +188,12 @@ class Home extends StatelessWidget {
                       Text(
                         "MON,2 MAY,2022",
                         style: TextStyle(
-                            fontSize: 14, fontWeight: FontWeight.w600),
+                            fontSize: 14, fontWeight: FontWeight.w400),
                       ),
                       Text(
                         "RAY",
                         style: TextStyle(
-                            fontSize: 14, fontWeight: FontWeight.w600),
+                            fontSize: 14, fontWeight: FontWeight.w400),
                       )
                     ],
                   ),
